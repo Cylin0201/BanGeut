@@ -17,7 +17,12 @@ public class UserService {
         }
         UserEntity user = UserEntity.builder()
                 .email(dto.getEmail())
+                .userId(dto.getUserId())
                 .password(dto.getPassword())
+                .name(dto.getName())
+                .gender(dto.isGender())
+                .college(dto.getCollege())
+                .department(dto.getDepartment())
                 .build();
         userRepository.save(user);
     }
