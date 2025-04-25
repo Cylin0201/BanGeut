@@ -21,8 +21,6 @@ public class UserService {
                 .password(dto.getPassword())
                 .name(dto.getName())
                 .gender(dto.isGender())
-                .college(dto.getCollege())
-                .department(dto.getDepartment())
                 .build();
         userRepository.save(user);
     }

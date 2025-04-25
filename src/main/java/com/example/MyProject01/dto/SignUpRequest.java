@@ -10,6 +10,4 @@ public class SignUpRequest {
     private String password;
     private String name;
     private boolean gender;
-    private String college;
-    private String department;
 }
