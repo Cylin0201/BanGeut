@@ -1,6 +1,6 @@
 package com.example.MyProject01.service;
 
-import com.example.MyProject01.dto.SignUpRequest;
+import com.example.MyProject01.dto.SignUpDto;
 import com.example.MyProject01.model.UserEntity;
 import com.example.MyProject01.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
 
-    public void signUp(SignUpRequest dto){
+    public void signUp(SignUpDto dto){
         if (userRepository.findByEmail(dto.getEmail()).isPresent()){
             throw new IllegalArgumentException("이미 존재하는 이메일입니다.");
         }
